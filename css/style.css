@@ -1,0 +1,244 @@
+/* Colocar variables de los colores */
+:root{
+    --colorBlue: #1877f2 ;
+    --colorGreen: #42b72a;
+    --colorMain: #f0f2f5 ;
+    --colorWhite: #ffffff ;
+    --colorText: #1c1e21;
+    --colorLine: #e3e5e8;
+    --colorLinks: #8a8d91;
+    --colorBorder:#f1f2f3;
+    --colorPlaceholder: #949496;
+    --colorCopy: #8a8d91;
+}
+/* Hack 1 */
+/* Nos sirve para que no se desacomoden las cajas cuando pones un width, heigth margin, padding */
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+  /* Hack 2  */
+  /* Esto hara que cada rem valga 10px - font-size en html y body*/
+  body{
+    font-size: 16px;
+    font-family: Helvetica, Arial, sans-serif;
+  }
+
+  /* Por defecto viene con un margin */
+  h1,h2{
+      margin: 0;
+  }
+
+  a{
+      text-decoration: none;
+  }
+
+  ul{
+      list-style: none;
+      margin: 0;
+      padding: 0;
+  }
+
+  /* CLASES GENERALES  */
+  .padding-main{
+      padding: 72px 0 112px 0 ;
+  }
+
+  .bg{
+      background-color: var(--colorMain);
+  }
+
+  .bold{
+      font-weight: bold;
+      color: var(--colorText)
+  }
+
+  .bold:hover{
+      text-decoration: underline;
+  }
+  .contenedor{
+      width: 980px;
+      /* Nos centra el contenido */
+      margin: 0 auto;
+  }
+
+  .pd-20{
+      /* 20 arriba y abajo , 0 izquierda y derecha */
+      padding: 20px 0;
+  }
+
+  .dos-columnas{
+      display: grid;
+      grid-template-columns: repeat(2,1fr);
+      column-gap: 3.2rem;
+  }
+
+  .contenedor-logo{
+      width: 548px;
+      height: 182.05px;
+      /* 112px arriba 0 derecha 16 abajo 0 izquierda */
+      padding: 122px 0 16px 0;
+  }
+
+  .logo{
+      width: 301.067px;
+      height: 106px;
+      margin: -28px;
+  }
+
+  .eslogan{
+      width: 50rem;
+      padding-bottom: 20px;
+      font-size: 28px;
+      font-weight: normal;
+      line-height: 3.2 rem;
+      color: var(--colorText);
+  }
+
+  /* Form */
+
+  .shadow{
+      /* 0px eje x , 5px eje y , 7px de densidad y color */
+      box-shadow: 0px 5px 7px #cccccc;
+  }
+
+  .card{
+      width: 396px;
+      height: 349.817px;
+      background-color: var(--colorWhite);
+      border-radius: 8px;
+      text-align: center;
+      padding: 10px 0px 24px 0px;
+      margin-top: 40px;
+  }
+
+  .card input[type="email"], input[type="password"]{
+      display: inline-block;
+      width: 360px;
+      height: 52px;
+      padding: 14px 16px;
+      margin: 6px 0px;
+      border-radius: 6px;
+      outline: none;
+      border: 1px solid var(--colorBorder);
+  }
+
+  .card input[type="email"]::placeholder, input[type="email"]::placeholder{
+      color: var(--colorPlaceholder);
+      font-size: 1.7rem;
+  }
+  .card input[type="email"]:focus, input[type="password"]:focus{
+      border: 1px solid var(--colorBlue);
+      box-shadow: 0px 0px 1px var(--colorBlue);
+  }
+
+  
+
+  .card input[type="submit"]:focus{
+      border: 1px solid var(--colorBlue);
+      box-shadow: 0px 0px 3px var(--colorBlue);
+  }
+
+  .btn-blue{
+      width: 364px;
+      height: 48px;
+      border-radius: 6px;
+      border: none;
+      margin: 1rem 0 1.6rem 0;
+      padding: 0px 16px;
+      background-color: var(--colorBlue) ;
+      font-size: 2rem;
+      color: var(--colorWhite);
+      font-weight: bold;
+      cursor: pointer;
+  }
+
+  /* Cuando te acercas con el mouse cambiar de color */
+  .btn-blue:hover{
+    background-color: #1c73e4;
+  }
+
+  .link {
+      color: var(--colorBlue);
+      font-size: 14px;
+  }
+
+  .link:hover{
+      text-decoration: underline;
+  }
+
+  .line{
+      height: 1px;
+      border-top: 1px solid var(--colorLine);
+      margin: 20px 16px 26px 16px;
+  }
+
+  .btn-green{
+      display: inline-block;
+      width: 189.75px;
+      height: 48px;
+      padding: 15px 15px;
+      border-radius: 6px;
+      font-weight: bold;
+      font-size: 17px;
+      background-color: var(--colorGreen);
+      color: var(--colorWhite);
+  }
+
+  .btn-green:hover{
+      background-color: #13a826;
+
+  }
+
+  .info{
+      grid-column: 2/3;
+      font-size: 14px;
+      text-align: center;
+      color: var(--colorText);
+      margin: 2.8rem 0 0 0 ;
+      line-height: 2rem;
+  }
+
+  /* Footer */
+
+  .contain{
+      margin: 10px 10px;
+      text-align: center;
+  }
+ 
+
+  .links {
+      padding-top: 8px ;
+  }
+
+  .links a{
+      color: var(--colorLinks);
+      font-size: 1.2rem;
+  }
+
+  .links a:hover{
+      text-decoration: underline;
+  }
+
+  .links li{
+      display:inline-block;
+      padding-right: 1.5rem;
+
+  }
+
+  .line-fo{
+    height: 1px;
+    border-top: 1px solid var(--colorLine);
+    margin: 8px 0 0 0 ;
+  }
+
+  .copy{
+    margin: 2.5rem 0;
+    font-size: 11px;
+    color: var(--colorCopy);
+  }
