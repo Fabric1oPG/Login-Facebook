@@ -54,6 +54,7 @@ html {
   }
 
   .bold{
+      /* Especifica el peso o grueso de la letra : Seria en negrita */
       font-weight: bold;
       color: var(--colorText)
   }
@@ -198,6 +199,7 @@ html {
   .info{
       grid-column: 2/3;
       font-size: 14px;
+      /* Como es un parrafo se debe poner text-align: ; */
       text-align: center;
       color: var(--colorText);
       margin: 2.8rem 0 0 0 ;
